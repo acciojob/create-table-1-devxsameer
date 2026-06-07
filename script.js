@@ -1,11 +1,16 @@
 function insert_Row() {
     const table = document.getElementById("sampleTable");
 
-    const newRow = table.insertRow(-1); // insert at end
+    const row = document.createElement("tr");
 
-    const cell1 = newRow.insertCell(0);
-    const cell2 = newRow.insertCell(1);
+    const cell1 = document.createElement("td");
+    cell1.textContent = "New Cell1";
 
-    cell1.appendChild(document.createTextNode("New Cell1"));
-    cell2.appendChild(document.createTextNode("New Cell2"));
+    const cell2 = document.createElement("td");
+    cell2.textContent = "New Cell2";
+
+    row.appendChild(cell1);
+    row.appendChild(cell2);
+
+    table.appendChild(row);
 }
